@@ -6,7 +6,7 @@
   "description": "Shows the daily kin",
 
   "background": {
-    "scripts": ["tzolkin.js", "background.js"],
+    "scripts": ["utils.js", "tzolkin.js", "background.js"],
     "persistent": false
   },
 

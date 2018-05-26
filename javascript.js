@@ -35,10 +35,10 @@ for (var item of data.enchantedWave) {
 
 let kinDOM = document.getElementById('kin');
 kinDOM.addEventListener('click', function (tab) {
-  chrome.tabs.create({ url: data.trecelunasUrl });
+  browser.tabs.create({ url: data.trecelunasUrl });
 });
 
 let donate = document.getElementById('donate');
 donate.addEventListener('click', function (tab) {
-  chrome.tabs.create({ url: 'https://github.com/Garito/tzolkin#feel-free-to-give-some-love-by-donating-cryptos' });
+  browser.tabs.create({ url: 'https://github.com/Garito/tzolkin#feel-free-to-give-some-love-by-donating-cryptos' });
 })
