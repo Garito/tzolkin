@@ -1,0 +1,118 @@
+<!DOCTYPE html lang="es">
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" integrity="sha256-zIG416V1ynj3Wgju/scU80KAEWOsO5rRLfVyRDuOv7Q=" crossorigin="anonymous" />
+    <style>
+      .section {
+        padding: 1em 1em;
+      }
+
+      #kin, .title, .subtitle {
+        margin-bottom: 0.5em;
+      }
+
+      #kin {
+        cursor: pointer;
+      }
+
+      #donate {
+        margin: 0.5em 0.5em;
+      }
+    </style>
+  </head>
+
+<body>
+  <div id="content" class="section is-medium">
+    <div class="container has-text-centered">
+      <h2 class="subtitle"><time id="now"></time></h2>
+      
+      <div id="kin" alt="Abrir en 13lunas.net" title="Abrir en 13lunas.net">
+        <div class="kin-symbol">
+          <div><img id="tone-img" src="" /></div>
+          <div><img id="kin-img" src="" /></div>
+        </div>
+        
+        <span id="kin-number"></span> <span id="kin-name" class="title"></span>
+      </div>
+
+      <button id="donate" class="button is-primary is-outlined" type="button">Dona</button>
+
+      <div id="enchanted">
+        <legend class="is-size-6">Onda encantada de<span id="legend"></span></legend>
+        <table>
+          <tr>
+            <td id="magnetico" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td id="lunar" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td></td><td></td>
+            <td id="cosmico" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td id="cristal" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+          </tr>
+          <tr>
+            <td id="electrico" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td></td><td></td><td></td>
+            <td id="espectral" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+          </tr>
+          <tr>
+            <td id="autoexistente" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td></td><td></td><td></td>
+            <td id="planetario" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+          </tr>
+          <tr>
+            <td id="entonado" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td id="ritmico" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td id="resonante" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td id="galactico" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+            <td id="solar" class="has-text-centered">
+              <img class="tone" src="" />
+              <img class="kin" src="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="tzolkin.js"></script>
+  <script src="javascript.js"></script>
+</body>
+</html> 
