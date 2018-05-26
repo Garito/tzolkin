@@ -2,6 +2,10 @@
 
 Also opens a link to 13lunas.net's daily kin page for a detailed reading
 
+## How to install it
+
+Go to the releases page of this repo, download the .crx file, drop it to chrome and accept the installation
+
 ## Feel free to give some love by donating cryptos
 
 BTC: 1GtKxwZGR65ar9V8xafxhMiniZyqXej2GC  
