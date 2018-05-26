@@ -40,5 +40,5 @@ kinDOM.addEventListener('click', function (tab) {
 
 let donate = document.getElementById('donate');
 donate.addEventListener('click', function (tab) {
-  chrome.tabs.create({ url: 'https://github.com/Garito/tzolkin' });
+  chrome.tabs.create({ url: 'https://github.com/Garito/tzolkin#feel-free-to-give-some-love-by-donating-cryptos' });
 })
