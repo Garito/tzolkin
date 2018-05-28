@@ -5,8 +5,10 @@
 
   "description": "Shows the daily kin",
 
+  "permissions": [ "tabs" ],
+
   "background": {
-    "scripts": ["utils.js", "tzolkin.js", "background.js"],
+    "scripts": ["icons.js", "tables.js", "utils.js", "tzolkin.js", "background.js"],
     "persistent": false
   },
 
@@ -14,12 +16,12 @@
     "default_popup": "index.html",
     "default_title": "yTzolkin",
     "default_icon": {
-      "48": "imgs/semilla.gif"
+      "128": "imgs/semilla.png"
     }
   },
 
   "icons": {
-    "48": "imgs/semilla.gif"
+    "128": "imgs/semilla.png"
   },
 
   "manifest_version": 2

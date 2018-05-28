@@ -15,35 +15,26 @@ function get_kin (date) {
   return kin;
 }
 
-function kin_data (kin) {
-  var table = {
-    symbols: ["Dragón", "Viento", "Noche", "Semilla", "Serpiente", "Enlazador de mundos", "Mano",
-              "Estrella", "Luna", "Perro", "Mono", "Humano", "Caminante del cielo", "Mago",
-              "Águila", "Guerrero", "Tierra", "Espejo", "Tormenta", "Sol"],
-    tones: {
-      femenine: ["Magnética", "Lunar", "Eléctrica", "Autoexistente", "Entonada", "Rítmica",
-                 "Resonante", "Galáctica", "Solar", "Planetaria", "Espectral", "Cristal",
-                 "Cósmica"],
-      masculine: ["Magnético", "Lunar", "Eléctrico", "Autoexistente", "Entonado", "Rítmico",
-                  "Resonante", "Galáctico", "Solar", "Planetario", "Espectral",
-                  "Cristal", "Cósmico"]
-    },
-    colors: {
-      femenine: ["Roja", "Blanca", "Azul", "Amarilla"], 
-      masculine: ["Rojo", "Blanco", "Azul", "Amarillo"]
-    },
-    femenines: ["Noche", "Semilla", "Serpiente", "Mano", "Estrella", "Luna", "Águila", "Tierra", "Tormenta"]
-  }
-  var symbol = table["symbols"][((kin % 20) || 20) - 1];
-
-  var sex = (table["femenines"].indexOf(symbol) > -1) ? "femenine" : "masculine";
+function get_kin_data (kin) {
+  let lang = getLang({'en': 'en', 'es': 'es'}, 'es');
+  var kin_num = ((kin % 20) || 20) - 1;
+  var symbol = table[lang]["symbols"][kin_num];
   var tone_num = ((kin % 13) || 13);
-  var tone = table["tones"][sex][tone_num - 1];
-  var slug = slugify(table["tones"]["masculine"][tone_num - 1]);
-  var tone_icon = table["tones"]["masculine"][tone_num -1];
-  var color = table["colors"][sex][((kin % 4) || 4) - 1];
-  var symbol_img = this.slugify(symbol.split(" ")[0]) + ".gif";
-  var tone_img = tone_num + "_" + this.slugify(tone_icon) + ".png";
+
+  if ('femenines' in table[lang]) {
+    var sex = (table[lang]["femenines"].indexOf(symbol) > -1) ? "femenine" : "masculine";
+    var tone = table[lang]["tones"][sex][tone_num - 1];
+    var slug = icons.slugs[tone_num - 1];
+    var color = table[lang]["colors"][sex][((kin % 4) || 4) - 1];
+  } else {
+    var sex = 'androgin';
+    var tone = table[lang]["tones"][tone_num - 1];
+    var slug = icons.slugs[tone_num - 1];
+    var color = table[lang]["colors"][((kin % 4) || 4) - 1];
+  }
+
+  var symbol_img = icons.symbols[kin_num];
+  var tone_img = icons.tones[tone_num - 1];
 
   return {symbol: symbol, sex: sex, slug: slug, tone: tone, color: color, icon: {kin: symbol_img, tone: tone_img}}
 }
@@ -52,24 +43,24 @@ function enchanted_wave (kin) {
   var tone = tone_num = ((kin % 13) || 13), magnetic = kin - tone + 1, wave = [];
   
   for(var i = 0; i < 13; i++) {
-    wave.push(this.kin_data(magnetic++));
+    wave.push(this.get_kin_data(magnetic++));
   }
 
   return wave;
 }
 
 function todays (imgs_folder = 'imgs/') {
+  let lang = getLang({'en': 'en', 'es': 'es'}, 'es');
   let today = new Date();
 
-  let trecelunasLink = 'http://13lunas.net/umbral.htm?nombre=Hoy&dia={dia}&mes={mes}&ano={ano}&B1=Enviar';
-  let trecelunasUrl = trecelunasLink.replace('{dia}', today.getDate())
-                                    .replace('{mes}', today.getMonth() + 1)
-                                    .replace('{ano}', today.getFullYear());
+  let trecelunasUrl = table[lang].url.replace('{dia}', today.getDate())
+                               .replace('{mes}', today.getMonth() + 1)
+                               .replace('{ano}', today.getFullYear());
   let kin = get_kin(today);
-  let kin_metadata = kin_data(kin);
+  let kin_metadata = get_kin_data(kin);
   let enchanted_wave_data = enchanted_wave(kin);
 
-  let name = kin_metadata.symbol + ' ' + kin_metadata.tone;
+  let name = table[lang].tmpl.replace('{symbol}', kin_metadata.symbol).replace('{tone}', kin_metadata.tone);
   let kinImg = imgs_folder + kin_metadata.icon.kin;
   let toneImg = imgs_folder + kin_metadata.icon.tone;
 

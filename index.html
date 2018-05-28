@@ -1,4 +1,4 @@
-<!DOCTYPE html lang="es">
+<!DOCTYPE html>
 
 <html>
   <head>
@@ -17,8 +17,16 @@
         cursor: pointer;
       }
 
+      #kin-img {
+        margin-top: -10px;
+      }
+
       #donate {
         margin: 0.5em 0.5em;
+      }
+
+      .table td {
+        border: 0px solid white;
       }
 
       .tone, .kin {
@@ -32,19 +40,19 @@
     <div class="container has-text-centered">
       <h2 class="subtitle"><time id="now"></time></h2>
       
-      <div id="kin" alt="Abrir en 13lunas.net" title="Abrir en 13lunas.net">
+      <div id="kin">
         <div class="kin-symbol">
-          <div><img id="tone-img" src="" /></div>
-          <div><img id="kin-img" src="" /></div>
+          <div><img id="tone-img" src="" width="48" /></div>
+          <div><img id="kin-img" src="" width="48" /></div>
         </div>
         
         <span id="kin-number"></span> <span id="kin-name" class="title"></span>
       </div>
 
-      <button id="donate" class="button is-primary is-outlined" type="button">Dona</button>
+      <button id="donate" class="button is-primary is-outlined" type="button"></button>
 
       <div id="enchanted">
-        <legend class="is-size-6">Onda encantada de<span id="legend"></span></legend>
+        <legend class="is-size-6"><span id="legend"></span></legend>
         <table class="table is-fullwidth">
           <tr>
             <td id="magnetico" class="has-text-centered">
@@ -116,6 +124,8 @@
       </div>
     </div>
   </div>
+  <script src="icons.js"></script>
+  <script src="tables.js"></script>
   <script src="utils.js"></script>
   <script src="tzolkin.js"></script>
   <script src="javascript.js"></script>
