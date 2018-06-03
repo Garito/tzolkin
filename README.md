@@ -11,6 +11,8 @@ Download the .crx file
 Open your addons page in chrome
 Drop the extension and accept the installation
 
+[![Installation video in spanish](https://img.youtube.com/vi/0FpexE_nMwE/0.jpg)](https://www.youtube.com/watch?v=0FpexE_nMwE)
+
 ### Firefox users
 Download the .xpi file
 Drop the extension and accept the installation
