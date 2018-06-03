@@ -7,15 +7,15 @@ Also opens a link to 13lunas.net's daily kin page for a detailed reading
 Go to the releases page of this repo  
 
 ### Chromme users
-Download the .crx file
-Open your addons page in chrome
-Drop the extension and accept the installation
+Download the .crx file  
+Open your addons page in chrome  
+Drop the extension and accept the installation  
 
 [![Installation video in spanish](https://img.youtube.com/vi/0FpexE_nMwE/0.jpg)](https://www.youtube.com/watch?v=0FpexE_nMwE)
 
 ### Firefox users
-Download the .xpi file
-Drop the extension and accept the installation
+Download the .xpi file  
+Drop the extension and accept the installation  
 
 ## Feel free to give some love by donating cryptos
 
