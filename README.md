@@ -1,4 +1,4 @@
-# Browser extension to check the daily Tzolkin's kin and its enchanted wave
+# Browser extension to check the daily Tzolkin's kin and its wavespell
 
 Also opens a link to 13lunas.net's daily kin page for a detailed reading
 
