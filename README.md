@@ -11,6 +11,9 @@ Download the .crx file
 Open your addons page in chrome
 Drop the extension and accept the installation
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=0FpexE_nMwE" target="_blank">
+  <img src="http://img.youtube.com/vi/0FpexE_nMwE/0.jpg" alt="How to install it spanish subtitles" width="240" height="180" border="10" />
+</a>
 [![Installation video in spanish]](https://www.youtube.com/watch?v=0FpexE_nMwE)
 
 ### Firefox users
